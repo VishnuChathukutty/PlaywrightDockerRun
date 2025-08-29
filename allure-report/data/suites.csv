@@ -1,0 +1,6 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","558","Wrong File Type","","Sat Aug 30 01:00:08 IST 2025","passed","Sat Aug 30 01:00:09 IST 2025","Chat Response Validations","chatValidations.spec.js","",""
+"","122304","Single File Upload","","Sat Aug 30 00:53:20 IST 2025","failed","Sat Aug 30 00:55:23 IST 2025","","chatValidations.spec.js","",""
+"","120747","Multiple Files Upload Validations","","Sat Aug 30 00:55:38 IST 2025","failed","Sat Aug 30 00:57:38 IST 2025","","chatValidations.spec.js","",""
+"","120456","Wrong Prompt Validation","","Sat Aug 30 01:00:09 IST 2025","failed","Sat Aug 30 01:02:09 IST 2025","Chat Response Validations","chatValidations.spec.js","",""
+"","120484","Positive Chat Response Check","","Sat Aug 30 00:57:53 IST 2025","failed","Sat Aug 30 00:59:53 IST 2025","Chat Response Validations","chatValidations.spec.js","",""
