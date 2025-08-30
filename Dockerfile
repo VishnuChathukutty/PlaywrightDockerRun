@@ -1,5 +1,6 @@
 # Use official Playwright image with all browsers pre-installed
 FROM mcr.microsoft.com/playwright:v1.55.0-jammy
+RUN apt-get update && apt-get install -y iputils-ping
 
 # Set working directory inside the container
 WORKDIR /tests
@@ -14,4 +15,4 @@ RUN npm install
 RUN npm install -g allure-commandline --save-dev
 
 # Run Playwright tests with Allure reporter
-CMD ["npx", "playwright", "test", "--reporter=allure-playwright"]
+CMD ["npx", "playwright", "test", "--reporter=allure-playwright","--project=chromium"]

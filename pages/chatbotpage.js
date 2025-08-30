@@ -37,12 +37,16 @@ class ChatBotPage{
         await route.continue();
         });
 
-        //await this.page.goto('http://localhost:8000');
-        await this.page.goto('http://host.docker.internal:8000');
+        await this.page.goto('http://localhost:8000');
+        //await this.page.goto('http://host.docker.internal:8000');
+        //await this.page.goto('http://chatbot:8000/');
 
         await this.expect(this.page).toHaveTitle('Vite + React + TS');
         const filePath= this.path.resolve(__dirname,'..', 'tests','files_for_upload',fileName);
         await this.page.setInputFiles(this.chooseFileInput,filePath);
+        await this.expect(this.uploadButton).toBeAttached({timeout:15000});
+        await this.expect(this.uploadButton).toBeEnabled();
+        
         await this.uploadButton.click();
         await this.expect(this.genericUploadedFileName).toBeVisible();
         await this.expect(this.genericUploadedFileName).toContainText('Human_Evolution.pdf');
@@ -55,8 +59,9 @@ class ChatBotPage{
 
     async navigateToPage()
     {
-       // await this.page.goto('http://localhost:8000');
-       await this.page.goto('http://host.docker.internal:8000');
+       await this.page.goto('http://localhost:8000');
+       //await this.page.goto('http://host.docker.internal:8000');
+        //await this.page.goto('http://chatbot:8000/');
     }
 
     async performMultipleFilesUpload(fileNames)

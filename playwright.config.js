@@ -1,4 +1,4 @@
-import { defineConfig } from '@playwright/test';
+import { chromium, defineConfig } from '@playwright/test';
 
 const config=({
   testDir: './tests',
@@ -14,6 +14,11 @@ const config=({
     trace: 'retain-on-failure'
     
   },
+  projects:[
+    {
+      name:'chromium'
+    }
+  ]
 });
 
 module.exports=config

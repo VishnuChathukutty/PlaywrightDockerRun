@@ -3,9 +3,9 @@ services:
     build:
       context: .
       dockerfile: Dockerfile
-    ports:
-      - "5050:5050"
     volumes:
       - .:/tests
       - ./tests/files_for_upload:/tests/tests/files_for_upload
+  
+ 
  
